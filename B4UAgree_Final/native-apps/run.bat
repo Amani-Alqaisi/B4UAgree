@@ -1,0 +1,1 @@
+python "c:\Users\Meish\Desktop\B4UAgree_Final\native-apps\main.py" %*

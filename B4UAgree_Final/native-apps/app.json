@@ -1,0 +1,7 @@
+{
+    "name": "com.bforuagree.main",
+    "description": "Runs analysis",
+    "path": "run.bat",
+    "type": "stdio",
+    "allowed_origins": ["chrome-extension://jnblnhhoapjjikciojoahgafgkjlnbnh/"]
+  }
