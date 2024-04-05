@@ -1,8 +1,9 @@
 import json
 from flask import Flask, jsonify, request
 from privacysummarizer import get_summary
-
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 
 # what we need long term 
