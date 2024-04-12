@@ -1,9 +1,10 @@
 [project]
-name = "nlp-backend"
+name = "proto_flask_controller"
 version = "1.0.0"
 description = "sumarizes privacy policy."
 dependencies = [
     "flask",
+    "bert-extractive-summarizer"
 ]
 
 [build-system]
