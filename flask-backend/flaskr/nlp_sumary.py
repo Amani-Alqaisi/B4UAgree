@@ -36,3 +36,9 @@ def send_summary(result):
     f = open("output/summary.txt", "a", encoding="utf-8")
     f.write(result)
     f.close()
+
+f_g=open('/Users/walshlia/Documents/GitHub/B4UAgree/test-privacy/privacy/grinnell_privacy.txt','r')
+rawText_grinnell=f_g.read()
+#run method and print result
+resultSum = get_summary(rawText_grinnell,4)
+print(resultSum)
