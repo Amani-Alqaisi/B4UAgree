@@ -13,7 +13,7 @@ Our main goal is to get the code polished to the point of our MVP.
    - Critical Information in Summarizer
 
 2. **Testing**
-   - Front-End Testing: Verifying the summary output excludes unnecessary information
+   - Front-End Testing: Account for new features of Sprint 6
    - Back-End Testing: Creating a test suite for flask_controller's app.py
 
 3. **Milestone**
