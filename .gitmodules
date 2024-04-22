@@ -1,6 +1,1 @@
-[submodule "PrivacyScore"]
-	path = PrivacyScore
-	url = https://github.com/PrivacyScore/PrivacyScore.git
-[submodule "privacy-policy-submodule"]
-	path = privacy-policy-submodule
-	url = https://github.com/JPAntonisse/privacy-policy-evaluator.git
+
