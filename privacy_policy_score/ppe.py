@@ -1,3 +1,4 @@
+# python ppe.py evaluate "path to .txt file"
 from privacy_policy_evaluator import paragraphing, commands, preprocessing, helpers, correlation, wordscoring, topic_grouper
 from typing import Callable
 
@@ -11,7 +12,7 @@ def main(args=None):
     try:
         # Select the function in this document that is the first argument
         arg_func: Callable = globals()[args.function]
-        # Call the funciton
+        # Call the function
         arg_func(args)
     except KeyError:
         commands.parser.parse_args(['-h'])
@@ -39,15 +40,17 @@ def evaluate_on_topic(args):
     text = helpers.read_file(args.file)
     # Paragraph the given text
     paragraphed = paragraphing.paragraph(text)
-    # Get topics from argumnets
+    # Get topics from arguments
     topics = helpers.split(args.topic)
     # Do the grouping
     grouped = topic_grouper.group(paragraphed, topics, 0.1)
     # Score each topic on associated text
     scored_topics = topic_grouper.evaluate(grouped)
 
-    # for key, value in d.items():
-    print(scored_topics)
+    # Print the mean_privacy number
+    mean_privacy = scored_topics.get('mean_privacy', None)
+    if mean_privacy is not None:
+        print("Mean Privacy Score:", mean_privacy)
 
 
 def evaluate_score(args):
@@ -59,7 +62,7 @@ def evaluate_score(args):
     text = helpers.read_file(args.file)
     # Get the Score
     score = wordscoring.score_text(text)
-    print(score)
+    print(score['mean_privacy'])
 
 
 def compare(args):
@@ -70,8 +73,8 @@ def compare(args):
     text1 = helpers.read_file(args.file1)
     text2 = helpers.read_file(args.file2)
 
-    # Prepreocessing
-    policies = preprocessing.full_preproccessing([text1, text2])
+    # Preprocessing
+    policies = preprocessing.full_preprocessing([text1, text2])
 
     # Do the compare
     df = correlation.correlation_matrix(policies)
