@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 import json
 from summarizer.sbert import SBertSummarizer
 
@@ -25,8 +25,8 @@ def get_privacy_policy():
   print(PrivacyPolicy)
   return PrivacyPolicy
 
-# get request 
-@app.route('/sum', methods=['GET'])
-def send_summary():
-  make_sum= get_summary(PrivacyPolicy.pop(),5)
-  return make_sum
+# # get request 
+# @app.route('/sum', methods=['GET'])
+# def send_summary():
+#   make_sum= get_summary(PrivacyPolicy.pop(),5)
+#   return make_sum
