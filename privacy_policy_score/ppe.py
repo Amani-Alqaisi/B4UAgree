@@ -1,4 +1,9 @@
+# Note: the privacy policy needs to be in a .txt file
+# Instructions to get the privacy policy score:
+# python setup.py
+# pip install sklearn
 # python ppe.py evaluate "path to .txt file"
+# Output: Float score ranging from 0-10
 from privacy_policy_evaluator import paragraphing, commands, preprocessing, helpers, correlation, wordscoring, topic_grouper
 from typing import Callable
 
