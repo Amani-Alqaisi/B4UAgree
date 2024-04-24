@@ -27,6 +27,14 @@ chrome.runtime.onMessage.addListener(
             top: 0,
             left: 0, 
             focused : true, 
+          }).then(function (doc) {
+              //console.log(document.getElementById("content"))
+              // console.log(doc.tabs[0])
+              // console.log(doc.tabs[0].id)
+              // chrome.scripting.executeScript({
+              //   target: {tabId: doc.tabs[0].id},
+              //   files: ['popup.js']
+              // }); 
           }); 
         }  
     }
