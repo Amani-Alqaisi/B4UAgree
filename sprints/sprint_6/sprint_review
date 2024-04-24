@@ -1,0 +1,12 @@
+# Sprint Review Report 3
+
+### How has your product improved or progressed from a customer perspective?
+- error messages alert the user if the policy cannot be parsed
+- extension can summarize policy via the user pasting the link if it cannot be found
+- basic parsing implemented, sorts summary into categories based on html structures
+
+### What progress have you made that is not visible to a common user?
+- implemented production server
+- research on critical information summarization
+- rating system implemented on backend
+  
