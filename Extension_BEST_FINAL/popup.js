@@ -4,7 +4,7 @@ document.getElementById("addlink-container").style.display = "none";
 document.getElementById("error-container").style.display = "none";
 
 // attempting to fetch summary json from the link found and sent to back end 
-fetch("http://127.0.0.1:5000/sum", { 
+fetch("https://csc324spring2024.us.reclaim.cloud/sum", { 
     mode:  'cors', 
     method: 'GET',
 }).then(function (response) {
@@ -58,7 +58,7 @@ fetch("http://127.0.0.1:5000/sum", {
 
                     //sending provided link to backend 
                     const my_obj = {"privacyPolicy": link.value};
-                    fetch("http://127.0.0.1:5000/sendpolicy", {
+                    fetch("https://csc324spring2024.us.reclaim.cloud/sendpolicy", {
                         mode:  'cors', 
                         method: 'POST', 
                         headers: { "Content-type": "application/json"},
@@ -67,7 +67,7 @@ fetch("http://127.0.0.1:5000/sum", {
                             // if we sent the link successully, then continue
                              if (response.status === 200) {
                                 console.log("successful link")
-                                fetch("http://127.0.0.1:5000/sum", { 
+                                fetch("https://csc324spring2024.us.reclaim.cloud/sum", { 
                                     mode:  'cors', 
                                     method: 'GET',
                                 }).then(function (response) {
