@@ -1,4 +1,3 @@
-import json
 from flask import Flask, jsonify, request
 from privacysummarizer import get_summary, html_to_summary
 from flask_cors import CORS
