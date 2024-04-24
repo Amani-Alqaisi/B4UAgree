@@ -7,7 +7,12 @@
     "action": {
       "default_title" : "B4UAgree Summary"
     },
-    "permissions": ["activeTab", "tabs", "scripting", "nativeMessaging", "http://127.0.0.1:5000/sum", "http://127.0.0.1:5000/sendpolicy", "index.html"],
+    "permissions": ["activeTab", "tabs", "scripting", "nativeMessaging"],
+    "host_permissions": ["<all_urls>", 
+    "http://127.0.0.1:5000/sum", 
+    "http://127.0.0.1:5000/sendpolicy",  
+    "http://*/",
+    "https://*/"], 
     "background": {
       "service_worker": "background.js"
     }
