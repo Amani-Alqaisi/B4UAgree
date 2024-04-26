@@ -27,12 +27,12 @@ Refer to the issue tracker on our [Trello board](https://trello.com/b/yHP9CPjB/b
 ## Assignment:
 - **Amani:**
   - Front-End Testing Task
-  - Rating System for Privacy Policy Safety + Data Sharing (in conjunction with Mai)
+  - Rating System for Privacy Policy Safety + Data Sharing
+  - Edit Presentation for Demo 2
  
 - **Joe:**
   - Back-End Testing Task
   - Milestone Write-Up
-  - Edit Presentation for Demo 2
   - Writing and Management of Sprint Documents
   
 - **Liam:**
