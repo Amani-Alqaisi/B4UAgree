@@ -1,3 +1,4 @@
+'''
 import numpy as np
 
 from privacy_policy_evaluator import helpers, paragraphing, topic_grouper
@@ -22,4 +23,4 @@ for threshold in thresholds:
     grouped = topic_grouper.group(paragraphed, topics, threshold)
     # Score each topic on associated text
     scored_topics = topic_grouper.evaluate(grouped)
-
+'''
