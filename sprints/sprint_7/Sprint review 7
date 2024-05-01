@@ -6,6 +6,8 @@
     - improve app design and art
 
  ### What progress have you made that is not visible to a common user?
- - implemented production server
+ - automaded code deployment to the  production server
 -  started linking rating system for back end 
 - restrucuted flask api to ensure front end is not as effected by lag.
+- started back end repo that is seperate from our existing one. 
+-
