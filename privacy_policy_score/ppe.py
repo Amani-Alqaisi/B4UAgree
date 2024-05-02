@@ -1,9 +1,14 @@
+# Credits: inspired by this the submodule from this repo: https://github.com/JPAntonisse/privacy-policy-evaluator
+# This is the main running file for the Privacy Policy Score/Rating out of 10, the higher the score -> more concerning
+
 # Note: the privacy policy needs to be in a .txt file
 # Instructions to get the privacy policy score:
-# python setup.py
-# pip install sklearn
 # python ppe.py evaluate "path to .txt file"
 # Output: Float score ranging from 0-10
+
+# if it doesn't work, run:
+# python setup.py
+# pip install sklearn
 from privacy_policy_evaluator import paragraphing, commands, preprocessing, helpers, wordscoring
 from typing import Callable
 
