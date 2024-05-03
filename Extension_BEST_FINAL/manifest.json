@@ -15,5 +15,8 @@
     "https://*/"], 
     "background": {
       "service_worker": "background.js"
+    },
+    "icons": {
+      "128": "logo1.png"
     }
 }
