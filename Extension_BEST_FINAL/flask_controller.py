@@ -18,10 +18,13 @@ def get_privacy_policy():
   return PrivacyPolicy
 
 # get request 
-@app.route('/sum', methods=['GET'])
+# needed to add a post for local server or it was rejected
+@app.route('/sum', methods=['POST','GET'])
 def send_summary():
-  # make_sum= get_summary(PrivacyPolicy.pop(),5)
-  make_sum = html_to_summary(PrivacyPolicy.pop())
+  print(request.headers)
+  request_data = request.get_json()
+  retrivedPolicy= request_data['privacyPolicy']
+  make_sum = html_to_summary(retrivedPolicy)
   return json.dumps(make_sum)
   # return json.dumps({"summary": make_sum})
 

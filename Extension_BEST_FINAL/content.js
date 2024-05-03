@@ -1,12 +1,3 @@
-/*
- * Filename: content.js
- * Description: This file hosts functions that:
- * * * Find the link to the privacy policy on the current webpage
- * * * Fetch the HTML from the found link
- * * * Parse the HTML of the privacy policy found on the current webpage
- * * * Send the parsed file to backend to write to popup
- * * * Send the message to background.js for background to open popup
- */
 
 fetchLink(findLink())
 
@@ -38,29 +29,18 @@ function fetchLink(link) {
             }
 
             // creates an object to send to backend 
-            const my_obj = {"privacyPolicy": curr_url};
-            console.log(curr_url)
+            //const my_obj = {"privacyPolicy": curr_url};
+            //console.log(curr_url)
             // post content -- send privacy policy to backend 
-            fetch("https://csc324spring2024.us.reclaim.cloud/sendpolicy", {
-                mode:  'cors', 
-                method: 'POST', 
-                headers: { "Content-type": "application/json"},
-                body: JSON.stringify(my_obj)
-            }).then(function (response) {
-                console.log(response.text()); 
-                //if (response.status === 200) {
-                    // open popup now 
-                    (async () => {
-                        const response = await chrome.runtime.sendMessage({message: "open"});
-                    })();
-                //}
-        });
+            (async () => {
+                const response = await chrome.runtime.sendMessage({message: "open", url: curr_url});
+            })();
+
     } 
     else {
         // open popup now 
         (async () => {
-            const response = await chrome.runtime.sendMessage({message: "open"});
+            const response = await chrome.runtime.sendMessage({message: "open", url: "Empty"});
         })();
     }
 }
-
