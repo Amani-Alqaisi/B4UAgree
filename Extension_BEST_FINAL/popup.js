@@ -6,7 +6,7 @@ document.getElementById("error-container").style.display = "none";
 (async () => {
     const response = await chrome.runtime.sendMessage({message: "link"});
     link = response.url
-    //console.log(response.url)
+    console.log(response.url)
     if (link != "Empty") {
         fetchData(link)
     }
@@ -17,23 +17,26 @@ document.getElementById("error-container").style.display = "none";
     }
 })();
 
+
+
 function fetchData(link) {
-    // // attempting to fetch summary json from the link found and sent to back end 
-    const my_obj = {"privacyPolicy": link};
-    console.log(link)
-    // post content -- send privacy policy to backend
-    // THE CORRECT API endpoint is below 
-    // "https://csc324spring2024.us.reclaim.cloud/sum"
-    fetch("http://127.0.0.1:5000/sum", {
+    const myHeaders = new Headers();
+    myHeaders.append("privacyPolicy", link);
+
+    const requestOptions = {
         mode:  'cors', 
-        method: 'POST', 
-        headers: { "Content-type": "application/json"},
-        body: JSON.stringify(my_obj)
-    }).then(function (response) {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow"
+    };
+    //"http://127.0.0.1:5000/sum"
+    fetch("https://csc324spring2024.us.reclaim.cloud/sum", requestOptions
+    ).then(function (response) {
         // return result
         return response.text()
     }).then(function (data) {
         try {
+           console.log(data);
            addContent(data);
         }
         // error -- assume couldn't find link or it was broken, which is why we couldn't parse the JSON
