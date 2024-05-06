@@ -58,4 +58,11 @@ We use a [Trello board](https://trello.com/invite/b/yHP9CPjB/ATTI94bb9185c9e2341
 - Each sprint corresponds to a milestone, and tasks for the sprint are created as cards on our Trello board.
 - The progress of each sprint can be tracked through the [Trello board](https://trello.com/invite/b/yHP9CPjB/ATTI94bb9185c9e2341b7aa2fe8585214bb5811623F3/b4uagree) associated with the project.
 
+## Acknowledgments
+
+We would like to acknowledge the following tools and inspirations:
+
+- **Privacy Policy Score Calculation**: The `privacy_policy_score` file is based on the work from the [privacy-policy-evaluator](https://github.com/JPAntonisse/privacy-policy-evaluator) repository.
+- **Flask Framework**: This project utilizes the Flask framework for building web applications. We are grateful to the Flask community for their excellent documentation and support.
+
 Thank you for being a part of B4UAgree, where online privacy meets transparency! 🌐🔒

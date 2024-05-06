@@ -17,16 +17,26 @@ def get_privacy_policy():
   PrivacyPolicy.append(retrivedPolicy)
   return PrivacyPolicy
 
+
+
 # get request 
 # needed to add a post for local server or it was rejected
-@app.route('/sum', methods=['POST','GET'])
-def send_summary():
-  print(request.headers)
-  request_data = request.get_json()
-  retrivedPolicy= request_data['privacyPolicy']
-  make_sum = html_to_summary(retrivedPolicy)
-  return json.dumps(make_sum)
+# @app.route('/sum', methods=['POST','GET'])
+# def send_summary():
+#   print(request.headers)
+#   request_data = request.get_json()
+#   retrivedPolicy= request_data['privacyPolicy']
+#   make_sum = html_to_summary(retrivedPolicy)
+#   return json.dumps(make_sum)
   # return json.dumps({"summary": make_sum})
+
+@app.route('/sum', methods=['GET'])
+def send_summary():
+  print("request headers")
+  privacyPolicy= request.headers.get('privacyPolicy')
+  make_sum = html_to_summary(privacyPolicy)
+  print("return privacy policy sum")
+  return json.dumps(make_sum)
 
 if __name__ == '__main__':
   app.run(port=5000)

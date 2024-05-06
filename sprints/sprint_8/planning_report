@@ -1,0 +1,47 @@
+# Sprint 7 Planning Report
+
+## Capacity:
+Our team's capacity for this sprint is expected to be relatively the same as the previous sprint with a general expectation of each team contributing about 5-10 hours of work, probably on the higher end of that estimate. Each team member will dedicate their available time based on their commitments and responsibilities. The accuracy of time estimates has been considered in task planning, and we allocate time for development ramp-up. 
+
+## Goals:
+Our main goal is to clean up, smooth out and otherwise finalize our project.
+
+1. **Development:**
+   - Pretty up the UX/UI
+   - Create a Learn More page for users to get a better understanding of our product
+   - Optimize Work Flow
+   - Improve summary of critical components of policy
+
+2. **Testing**
+   - Front-End Testing: Implement Learn More page test suite
+   - Back-End Testing: resolve library errors, swap to new test framework
+
+3. **Milestone**
+   - Write-Up Review Report
+   - Final Presentation
+   - Self-Selected Work
+
+## Task Breakdown:
+Refer to the issue tracker on our [Trello board](https://trello.com/b/yHP9CPjB/b4uagree) for a detailed breakdown of tasks and their associated components.
+
+## Assignment:
+- **Amani:**
+  - Front-end testing with the "Learn more" page
+  - Implement "Learn More" page
+ 
+- **Joe:**
+  - Back-End Testing Task, swap over to new test framework and implement
+  
+- **Liam:**
+  - Clean up front end github repository
+  
+- **Mai:**
+  - Improve System relating to Summary of Critical Components of a Policy
+
+- **Mia:**
+  - Pretty up the UX/UI
+  - Implement "Learn More" page
+  - Optimize Work Flow
+
+## Issue Tracker:
+Our instructor can view the results of our sprint planning using our [Trello board](https://trello.com/b/yHP9CPjB/b4uagree). Each sprint planning report generates Trello cards corresponding to specific tasks assigned to team members. The progress of each sprint can be tracked through the Trello board associated with the project.
