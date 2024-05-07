@@ -69,7 +69,7 @@ function addContent(data) {
 
     // -- change color of rating font by privacy safety level
     let bad = 7; 
-    let good = 3; 
+    let good = 5; 
 
     // default font color is black
     let color = "black"

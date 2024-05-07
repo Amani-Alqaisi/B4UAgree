@@ -26,9 +26,17 @@
             </section>
             
             <section id="how-we-do-it">
-                <h2>Our Process</h2>
+                <h2>Overview of Our Process</h2>
                 <p>At B4UAgree, we employ a meticulous process to provide users with comprehensive yet concise summaries and accurate scores of privacy policies. Our summarization technique harnesses the power of SBert, a state-of-the-art language processing model, renowned for its ability to distill complex textual information into succinct summaries. Leveraging SBert's advanced capabilities, we meticulously analyze and extract the essence of each privacy policy, ensuring that users receive clear and digestible insights. </p>
                 <p>The scoring process involves parsing privacy policy text into statements, identifying privacy-related terms, and calculating scores based on their occurrence and significance within each statement. These scores are then aggregated and normalized to assess the overall quality and transparency of the policy. Continuous refinement ensures the scoring methodology remains accurate and relevant over time.</p>
+            </section>
+            <section id="rating">
+                <h2>Understanding Scoring System</h2>
+                <p>Privacy Policy Rating Scores offer insights into a website's approach to privacy. These scores are determined by the average number of privacy-related words found within the policy. This calculation is represented as:</p>
+                <p>Average Privacy Word Score = (Total Statement Rating / Total Privacy Word Count)</p>
+                <p>Scores range from 0 to 10, with higher scores suggesting potentially greater privacy concerns, while lower scores indicate fewer concerns. For example, the average score across more than 100 privacy policies was 6.70.
+                    It's essential to interpret these scores carefully. While they provide valuable information, they should not be the sole factor in deciding whether to use a website. Consider other aspects such as the website's reputation, security measures, and data handling practices.</p>
+                <p>Acknowledgments: this scoring system is inspired by the "wordscoring" method from this <a href="https://github.com/JPAntonisse/privacy-policy-evaluator" target="_blank">repository.</a></p>
             </section>
             
             <section id="legal-non-liability">
@@ -41,6 +49,7 @@
                 </ul>
                 <p>By using our chrome extension, you agree to release us from any liability arising from your use of the extension or reliance on its information.</p>
             </section>
+            
             
         </div>
     </div>
