@@ -1,3 +1,4 @@
+import json
 from flask import Flask, jsonify, request
 from privacysummarizer import get_summary, html_to_summary
 from flask_cors import CORS
@@ -31,11 +32,10 @@ def get_privacy_policy():
 
 @app.route('/sum', methods=['GET'])
 def send_summary():
-  print("request headers")
-  privacyPolicy= request.headers.get('privacyPolicy')
-  make_sum = html_to_summary(privacyPolicy)
-  print("return privacy policy sum")
+  # make_sum= get_summary(PrivacyPolicy.pop(),5)
+  make_sum = html_to_summary(PrivacyPolicy.pop())
   return json.dumps(make_sum)
+  # return json.dumps({"summary": make_sum})
 
 if __name__ == '__main__':
   app.run(port=5000)
