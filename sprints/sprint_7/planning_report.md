@@ -37,6 +37,7 @@ Refer to the issue tracker on our [Trello board](https://trello.com/b/yHP9CPjB/b
   
 - **Liam:**
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Linking the scoring with the Front end(
   -    https://trello.com/c/PYBmyUQJ/113-back-end-server-move-rating-system-and-summary-of-critical-components-onto-server
   - Automate the deployment process
@@ -45,6 +46,12 @@ Refer to the issue tracker on our [Trello board](https://trello.com/b/yHP9CPjB/b
   - Linking the scoring with the Front end
   - Automate the deployment process
 >>>>>>> be78705 (Update planning_report.md)
+=======
+  - Linking the scoring with the Front end(
+  -    https://trello.com/c/PYBmyUQJ/113-back-end-server-move-rating-system-and-summary-of-critical-components-onto-server
+  - Automate the deployment process
+  -    https://trello.com/c/2di5oGqn/116-link-prod-server-with-github
+>>>>>>> acc8dd2 (Update planning_report.md)
   
 - **Mai:**
   - Update and enhance the Privacy Policy Summarizing
