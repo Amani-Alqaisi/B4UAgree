@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More</title>
+    <link rel="stylesheet" href="learn.css">
+</head>
+<body>
+    <header>
+        <div class="d-flex flex-row">
+            <button id="back">Previous</button>
+        </div>
+        <div class="row">
+            <h1>B4UAgree</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <section id="who-we-are">
+                <h2>About Us</h2>
+                <p>Any human that frequents the internet has encountered digital “cookies.” Very few of us read the privacy policies or fully understand what the cookies are doing. Yet, some of these policies are not a friend. Within the fine print, there can be gross violations of personal privacy and security from selling one’s data to forever haunting their internet existence. 
+                </p>
+                <p>Thus, we create B4UAgree: a browser extension plug-in that reads, analyzes, and summarizes any privacy policy one encounters on the web. We cannot change how companies operate with their cookies, but we can change how one perceives these cookies. We hope to create users who are fully aware of a company’s intentions and usage of their data. Therefore, they can be empowered to make the decisions that are best for them. 
+                </p>
+            </section>
+            
+            <section id="how-we-do-it">
+                <h2>Overview of Our Process</h2>
+                <p>At B4UAgree, we employ a meticulous process to provide users with comprehensive yet concise summaries and accurate scores of privacy policies. Our summarization technique harnesses the power of SBert, a state-of-the-art language processing model, renowned for its ability to distill complex textual information into succinct summaries. Leveraging SBert's advanced capabilities, we meticulously analyze and extract the essence of each privacy policy, ensuring that users receive clear and digestible insights. </p>
+                <p>The scoring process involves parsing privacy policy text into statements, identifying privacy-related terms, and calculating scores based on their occurrence and significance within each statement. These scores are then aggregated and normalized to assess the overall quality and transparency of the policy. Continuous refinement ensures the scoring methodology remains accurate and relevant over time.</p>
+            </section>
+            <section id="rating">
+                <h2>Understanding Scoring System</h2>
+                <p>Privacy Policy Rating Scores offer insights into a website's approach to privacy. These scores are determined by the average number of privacy-related words found within the policy. This calculation is represented as:</p>
+                <p>Average Privacy Word Score = (Total Statement Rating / Total Privacy Word Count)</p>
+                <p>Scores range from 0 to 10, with higher scores suggesting potentially greater privacy concerns, while lower scores indicate fewer concerns. For example, the average score across more than 100 privacy policies was 6.70.
+                    It's essential to interpret these scores carefully. While they provide valuable information, they should not be the sole factor in deciding whether to use a website. Consider other aspects such as the website's reputation, security measures, and data handling practices.</p>
+                <p>Acknowledgments: this scoring system is inspired by the "wordscoring" method from this <a href="https://github.com/JPAntonisse/privacy-policy-evaluator" target="_blank">repository.</a></p>
+            </section>
+            
+            <section id="legal-non-liability">
+                <h2>Legal Non-Liability</h2>
+                <p>Our chrome extension is designed to provide users with summarized and scored privacy policies for their convenience and understanding. While we strive to ensure the accuracy and reliability of the information provided, it's important to note that:</p>
+                <ul>
+                    <li>We do not provide legal advice. The information provided by our extension should not be construed as legal advice. Users are encouraged to consult with legal professionals for specific legal matters.</li>
+                    <li>We do not guarantee the accuracy or completeness of the information. Privacy policies can be complex and subject to change. While we make efforts to keep our summaries and scores up to date, we cannot guarantee their accuracy or completeness at all times.</li>
+                    <li>Users are responsible for their own decisions. The use of our chrome extension and the reliance on its information are at the user's own discretion and risk. We are not liable for any consequences resulting from the use of our extension or the interpretation of its content.</li>
+                </ul>
+                <p>By using our chrome extension, you agree to release us from any liability arising from your use of the extension or reliance on its information.</p>
+            </section>
+            
+            
+        </div>
+    </div>
+    <footer>
+        <p style="color:white;">&copy; 2024 B4UAgree. All rights reserved.
+            <br>
+        </p>
+    </footer>
+</body>
+<script src="learn.js"></script>
+</html>
