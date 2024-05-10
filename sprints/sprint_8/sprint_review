@@ -2,8 +2,9 @@
 
  ### How has your product improved or progressed from a customer perspective?
  - Learn More page implemented to allow users to get a better understanding of our product
+ - Scoring metric added
  - UI/UX improved
- - Summary now only 3 sentences per category
+ - Ability to toggle between summarizing by category and details
 
  ### What progress have you made that is not visible to a common user?
  - new testing framework under implementation
