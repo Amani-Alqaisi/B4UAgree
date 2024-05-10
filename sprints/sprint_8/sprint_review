@@ -1,0 +1,11 @@
+# Sprint Review Report 8
+
+ ### How has your product improved or progressed from a customer perspective?
+ - Learn More page implemented to allow users to get a better understanding of our product
+ - UI/UX improved
+ - Summary now only 3 sentences per category
+
+ ### What progress have you made that is not visible to a common user?
+ - new testing framework under implementation
+ - initial critical components summary implemented to improve accuracy of summary
+ - back end repository completed
