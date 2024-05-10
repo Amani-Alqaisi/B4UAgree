@@ -1,0 +1,20 @@
+{
+    "name": "B4UAgree",
+    "version": "1.0.0",
+    "description": "summary of privacy policy",
+    "manifest_version": 3,
+    "author": "Mia Hines",
+    "action": {
+      "default_title" : "B4UAgree Summary"
+    },
+    "permissions": ["activeTab", "tabs", "scripting", "nativeMessaging"],
+    "host_permissions": ["<all_urls>", 
+    "http://*/",
+    "https://*/"], 
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "128": "logo1.png"
+    }
+}
