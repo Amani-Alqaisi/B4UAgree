@@ -1,9 +1,13 @@
+
 document.getElementsByClassName("loader")[0].style.display = "block";
 document.getElementsByTagName("body")[0].style.backgroundColor = "#383b38";
 document.getElementById("content-container").style.display = "none";
 document.getElementById("addlink-container").style.display = "none";
 document.getElementById("error-container").style.display = "none";
 document.getElementById("learn-container").style.display = "none";
+
+
+
 let summary_type = "topic"; 
 let curr_data = {}; 
 
@@ -29,9 +33,12 @@ type_btn.addEventListener('click', (e) => {
 
 
 (async () => {
+    const current = await chrome.windows.getCurrent().then(function (win) {return win.id});
+    console.log(current);
     const response = await chrome.runtime.sendMessage({message: "link"});
-    link = response.url
-    console.log(response.url)
+    all_links = response.urls;
+    console.log(all_links)
+    link = all_links[current]; 
     if (link != "Empty") {
         fetchData(link)
     }
