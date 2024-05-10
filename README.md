@@ -11,15 +11,17 @@ Operational Use Cases:
 **Current Contents:**
   * [/sprints](./sprints): Directory containing sprint-related documents.
   * [/test-privacy](./test-privacy): Directory for privacy-related testing.
-  * [/nlp-backend](./nlp-backend): Directory that houses backend logic for Natural Language Processing.
-  * [/B4UAgree-Extension](./B4UAgree-Extention): Directory containing the front-end setup for the B4UAgree browser extension.
+  * [/nlp-backend](./nlp-backend): OUTDATED Directory that houses backend logic for Natural Language Processing.
+  * [/B4UAgree-Extension](./B4UAgree-Extention): OUTDATED Directory containing the front-end setup for the B4UAgree browser extension.
+  *  * [/Extension_BEST_FINAL](./Extension_BEST_FINAL): OUTDATED directory of the Chrome Extension.
   * [/tutorial_test](./tutorial_test): Directory for practicing with JSON message passing.
-  * [/Extension_BEST_FINAL](./Extension_BEST_FINAL): Directory containing the current working version of the extension.
+  * [/MVP_FrontEnd](./MVP_FrontEnd): MVP Directory containing the final version of the extension.
+ 
   * `.DS_Store`: System file (Desktop Services Store)  
 
 
 #### Web Server - Building The System, Adding Chrome Extension:
-1. Download the Extension_BEST_FINAL folder from this GitHub repo to your PC. 
+1. Download the MVP_FrontEnd folder from this GitHub repo to your PC. 
 2. Open the Chrome Browser.
 3. Navigate to the puzzle piece icon in the upper right-hand corner and click.
 4. Click "Manage Extensions" in the drop-down options.
