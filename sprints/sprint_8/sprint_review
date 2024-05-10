@@ -4,7 +4,7 @@
  - Learn More page implemented to allow users to get a better understanding of our product
  - Scoring metric added
  - UI/UX improved
- - Ability to toggle between summarizing by category and details
+ - Ability to toggle between summarizing by pre-determined topics, or by heading of the policy
 
  ### What progress have you made that is not visible to a common user?
  - new testing framework under implementation
