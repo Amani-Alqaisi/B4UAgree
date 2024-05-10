@@ -120,3 +120,19 @@ p {
 #linkBtn:hover, #linkBtn:focus {
     background-color: #762cae;
 }
+
+#summaryType {
+    background-color: #4e4e4e;
+    color: white;
+    border-radius: 5px; 
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    padding: 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#summaryType:hover {
+    background-color: #cdcdcd;
+    color: #000;
+}

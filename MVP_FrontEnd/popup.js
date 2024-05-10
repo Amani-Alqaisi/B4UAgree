@@ -4,6 +4,29 @@ document.getElementById("content-container").style.display = "none";
 document.getElementById("addlink-container").style.display = "none";
 document.getElementById("error-container").style.display = "none";
 document.getElementById("learn-container").style.display = "none";
+let summary_type = "topic"; 
+let curr_data = {}; 
+
+type_btn = document.getElementById("summaryType"); 
+type_btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (summary_type == "topic") {
+        summary_type = "headings"; 
+        addContent(curr_data);
+    }
+    else {
+        summary_type = "topic"; 
+        addContent(curr_data);
+    }
+
+    //document.getElementsByClassName("loader")[0].style.display = "block";
+    //document.getElementsByTagName("body")[0].style.backgroundColor = "#383b38";
+    // document.getElementById("content-container").style.display = "none";
+    // document.getElementById("learn-container").style.display = "none";
+});
+
+
 
 (async () => {
     const response = await chrome.runtime.sendMessage({message: "link"});
@@ -41,6 +64,7 @@ function fetchData(link) {
         try {
            console.log(data);
            addContent(data);
+           curr_data = data;
         }
         // error -- assume couldn't find link or it was broken, which is why we couldn't parse the JSON
         catch(err) { 
@@ -63,22 +87,24 @@ function addContent(data) {
     // get the "content" and "rating" divs to place the json content 
     const content = document.getElementById("content");
     const rating = document.getElementById("rating");
+    rating.innerHTML = "";
+    content.innerHTML = "";
 
     // NEED TO ROUND to 2 to 3 places
-    let num_score = Math.round(privacy_data["PrivacyPolicyScore"] * 100) / 100;
-
+    let print_score = Math.round(privacy_data["PrivacyPolicyScore"] * 100) / 100;
+    
     // -- change color of rating font by privacy safety level
-    let bad = 7; 
-    let good = 5; 
+    let bad = 6.9; 
+    let good = 6.6; 
 
     // default font color is black
     let color = "black"
     
     // assign color to font 
-    if (Math.round(num_score) <= good) {
+    if (print_score <= good) {
         color = "#1F993D"; 
     }
-    else if (Math.round(num_score) >= bad) {
+    else if (print_score >= bad) {
         console.log(rating.style)
         color = "#E5362E"; 
     }
@@ -87,15 +113,27 @@ function addContent(data) {
     }
 
     // add the rating to its container 
-    rating.innerHTML += `<h1 style="background-color:` + color + `;">` + "Score: " + num_score.toString() + `</h1>` 
+    rating.innerHTML += `<h1 style="background-color:` + color + `;">` + "Score: " + print_score.toString() + `</h1>` 
 
-    // each heading and summary pairing, place them with the correct tags inside the "content" div
-    for (let [heading, summary] of Object.entries(privacy_data)) {
-        console.log(summary)
-        if (summary.length > 0 && summary != "\u00a0") {
-            content.innerHTML += `<h2>` + heading.trim().replace(/\u00a0/g, ' ') + `</h2>` + `<p>` + summary + `</p>` ; 
+    console.log(summary_type)
+    if (summary_type === "topic") {
+        type_btn.value = "Change to Detailed View";
+        let topic_data = privacy_data["topics_summary"]; 
+        for (let [topic, summary] of Object.entries(topic_data)) {
+            content.innerHTML += `<h2>` + topic.trim().replace(/\u00a0/g, ' ') + `</h2>` + `<p>` + summary + `</p>` ; 
         }
     }
+    else {
+        type_btn.value = "Change to Topic View";
+        let headings_data = privacy_data["headings_summary"]; 
+        // each heading and summary pairing, place them with the correct tags inside the "content" div
+        for (let [heading, summary] of Object.entries(headings_data)) {
+            if (summary.length > 0 && summary != "\u00a0") {
+                content.innerHTML += `<h2>` + heading.trim().replace(/\u00a0/g, ' ') + `</h2>` + `<p>` + summary + `</p>` ; 
+            }
+        }
+    }
+
 
     // stop loader and show content now 
     document.getElementsByClassName("loader")[0].style.display = "none";
