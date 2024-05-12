@@ -10,15 +10,13 @@ Operational Use Cases:
 ## Repository Layout:
 **Current Contents:**
   * [/sprints](./sprints): Directory containing sprint-related documents.
-  * [/test-privacy](./test-privacy): Directory for privacy-related testing.
-  * [/nlp-backend](./nlp-backend): OUTDATED Directory that houses backend logic for Natural Language Processing.
   * [/B4UAgree-Extension](./B4UAgree-Extention): OUTDATED Directory containing the front-end setup for the B4UAgree browser extension.
   *  * [/Extension_BEST_FINAL](./Extension_BEST_FINAL): OUTDATED directory of the Chrome Extension.
   * [/tutorial_test](./tutorial_test): Directory for practicing with JSON message passing.
   * [/MVP_FrontEnd](./MVP_FrontEnd): MVP Directory containing the final version of the extension.
  
   * `.DS_Store`: System file (Desktop Services Store)  
-
+ * note all backend code is in our backend repo https://github.com/coder2343/B4UAgree_backend
 
 #### Web Server - Building The System, Adding Chrome Extension:
 1. Download the MVP_FrontEnd folder from this GitHub repo to your PC. 
@@ -37,20 +35,8 @@ Operational Use Cases:
 4. A popup will appear within a minute (or less) with the privacy policy summary.
 5. Note: The extension may not work on every site due to difficulties in finding a privacy policy, but an error screen should appear.
 
-### Local Server [Outdated] - Building the System:
-1. Download or pull the code from the designated repository.
-2. Install required libraries/programs:
-   - Python: Download and install Python.
-   - Install Python libraries using pip:
-     ```
-     pip install -U sentence-transformers
-     pip install Flask
-     pip install flask_cors
-     pip install bs4
-     pip install bert-extractive-summarizer
-     ```
-   - If encountering permissions errors, add "--user" to the end of the pip install command.
-3. Run the Flask controller by executing flask_controller.py in your preferred code editor or terminal. Ensure that the Flask server is running on your computer.
+### Local Backend server
+1. see the backend repo https://github.com/coder2343/B4UAgree_backend
 
 ## Issue Tracking:
 We use a [Trello board](https://trello.com/invite/b/yHP9CPjB/ATTI94bb9185c9e2341b7aa2fe8585214bb5811623F3/b4uagree) for issue tracking. Each sprint planning report creates a set of Trello cards that map to specific tasks assigned to team members. We prioritize transparency and collaboration by encouraging the community to contribute, report issues, or suggest improvements through our Trello board.
