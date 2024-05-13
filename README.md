@@ -10,9 +10,6 @@ Operational Use Cases:
 ## Repository Layout:
 **Current Contents:**
   * [/sprints](./sprints): Directory containing sprint-related documents.
-  * [/B4UAgree-Extension](./B4UAgree-Extention): OUTDATED Directory containing the front-end setup for the B4UAgree browser extension.
-  *  * [/Extension_BEST_FINAL](./Extension_BEST_FINAL): OUTDATED directory of the Chrome Extension.
-  * [/tutorial_test](./tutorial_test): Directory for practicing with JSON message passing.
   * [/MVP_FrontEnd](./MVP_FrontEnd): MVP Directory containing the final version of the extension.
  
   * `.DS_Store`: System file (Desktop Services Store)  
